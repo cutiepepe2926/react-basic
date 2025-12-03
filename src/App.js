@@ -1,28 +1,26 @@
-import MyState from "./component/MyState";
-import MyStateQ from "./component/MyStateQ";
-import Welcome from "./component/Welcome";
-import WelcomeClass from "./component/WelcomeClass";
-
+import IterationComponent from "./component/IterationComponent";
+import IterationComponent2 from "./component/IterationComponent2";
+import IterationComponentQ from "./component/IterationComponentQ";
+import IterationComponentQ2 from "./component/IterationComponentQ2";
 
 function App() {
 
     return (
-        <div>
-            <h3>컴포넌트와 props</h3>
-            <Welcome name={"홍길동"} age={20} addr={"서울시"} />
-            <Welcome name={"이순신"} age={30} />
+        <>
+            <h3>컴포넌트 반복</h3>
+            <IterationComponent/>
+            <hr/>
+
+            <h3>할일 목록만들기</h3>
+            <IterationComponent2/>
+
+            <h3>실습</h3>
+            <IterationComponentQ/>
 
             <hr/>
-            <h3>state값 확인하기</h3>
-            <MyState/>
-            <hr/>
-            <MyStateQ/>
-
-            
-            <hr/>
-            <WelcomeClass name={"홍길동"} age={20}/>
-              
-        </div>
+            <h3>실습</h3>
+            <IterationComponentQ2/>
+        </>
     )
 }
 
