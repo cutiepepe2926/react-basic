@@ -6,6 +6,8 @@ const EventComponentQ = () => {
     const [data, setData]= useState('메뉴를 선택하세요')
 
     const handleChange = (e) => {
+
+
         if(e.target.value === '메뉴선택') {
             setData('메뉴를 선택하세요');
             return;

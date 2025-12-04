@@ -1,0 +1,17 @@
+.app_wrap {
+    display: flex;
+    justify-content: center;
+}
+
+.app_wrap .item {
+    border: 1px solid #777;
+    color: yellow;
+}
+
+/* 전역선택자 :global은 이름으로 바로접근 가능 */
+:global .title {
+    color: green;
+}
+:global .content {
+    color: purple;
+}

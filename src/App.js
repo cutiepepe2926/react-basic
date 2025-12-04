@@ -1,25 +1,31 @@
-import IterationComponent from "./component/IterationComponent";
-import IterationComponent2 from "./component/IterationComponent2";
-import IterationComponentQ from "./component/IterationComponentQ";
-import IterationComponentQ2 from "./component/IterationComponentQ2";
+
+import './css/App.css'; //임포트
+import styled from './css/App.module.css'; //모듈css 임포트
 
 function App() {
 
     return (
         <>
-            <h3>컴포넌트 반복</h3>
-            <IterationComponent/>
-            <hr/>
+            <div>
+                <h3 style={{textAlign: "center", color: "red"}} >리액트에 직접 style하기</h3>
+                <div className="app_header">
+                    내용...
+                </div>
+                {/* 모듈 css */}
+                <div className={styled.app_wrap}>
+                    <div className={styled.item}>아이템</div>
+                    <div className={styled.item}>아이템</div>
+                    <div className={styled.item}>아이템</div>
+                </div>
+                {/* 모듈 css의 전역선택자 */}
+                <h3 className="title">:global의사용</h3>
+                <h3 className="content">:global의사용</h3>
+            
+                {/* public폴더 아래에 css적용 */}
+                <p className="static_hello">응?</p>
 
-            <h3>할일 목록만들기</h3>
-            <IterationComponent2/>
-
-            <h3>실습</h3>
-            <IterationComponentQ/>
-
-            <hr/>
-            <h3>실습</h3>
-            <IterationComponentQ2/>
+            </div>
+        
         </>
     )
 }
